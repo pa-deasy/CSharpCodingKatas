@@ -22,13 +22,13 @@ namespace ConnectBinaryTreeByLevel
             while (queue.Count > 0)
             {
                 var queueCount = queue.Count;
-                for (int index = 0; index < queueCount; index++)
+                for (int positionInLevel = 0; positionInLevel < queueCount; positionInLevel++)
                 {
                     var previous = current;
                     current = queue.Dequeue();
 
-                    //index > 0 because when i is 0 previous points to the last node of previous level, so skip it
-                    if (index > 0)
+                    //positionInLevel > 0 because when positionInLevel is 0 previous points to the last node of previous level, so skip it
+                    if (positionInLevel > 0)
                         previous.NextRight = current;
 
                     if (current.Left != null)
