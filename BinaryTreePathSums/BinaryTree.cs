@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace BinaryTreePathSums
 {
@@ -16,7 +14,26 @@ namespace BinaryTreePathSums
         public List<List<int>> PathsFromRootSummingTo(int sum)
             => SumOfPathsFrom(Root, sum, SumState.New).SuccessfulPaths;
 
-        public SumState SumOfPathsFrom(Node node, int targetSum, SumState sumState)
+        public IList<List<int>> AllPathsSummingTo(int sum)
+            => SumOfAllPaths(Root, sum, new List<List<int>>());
+
+        private List<List<int>> SumOfAllPaths(Node node, int targetSum, List<List<int>> allSuccessfulPaths)
+        {
+            if (node == null)
+                return allSuccessfulPaths;
+
+            allSuccessfulPaths.AddRange(SumOfPathsFrom(node, targetSum, SumState.New).SuccessfulPaths);
+
+            if (node.Left != null)
+                SumOfAllPaths(node.Left, targetSum, allSuccessfulPaths);
+
+            if (node.Right != null)
+                SumOfAllPaths(node.Right, targetSum, allSuccessfulPaths);
+
+            return allSuccessfulPaths;
+        }
+
+        private SumState SumOfPathsFrom(Node node, int targetSum, SumState sumState)
         {
             if (node == null || sumState.CurrentSum + node.Value > targetSum)
                 return sumState;
