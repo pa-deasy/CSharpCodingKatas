@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FibonacciRecursion", "FibonacciRecursion\FibonacciRecursion.csproj", "{46D8EA8F-0F06-46D2-ADCA-8496165FADBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FibonacciRecursion.Tests.Unit", "FibonacciRecursion.Tests.Unit\FibonacciRecursion.Tests.Unit.csproj", "{345772FB-C40D-490D-9A80-8C97C0504B1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46D8EA8F-0F06-46D2-ADCA-8496165FADBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46D8EA8F-0F06-46D2-ADCA-8496165FADBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46D8EA8F-0F06-46D2-ADCA-8496165FADBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46D8EA8F-0F06-46D2-ADCA-8496165FADBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{345772FB-C40D-490D-9A80-8C97C0504B1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{345772FB-C40D-490D-9A80-8C97C0504B1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{345772FB-C40D-490D-9A80-8C97C0504B1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{345772FB-C40D-490D-9A80-8C97C0504B1A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C23E8C3-E9F0-48AF-B359-7B8F912E7B91}
+	EndGlobalSection
+EndGlobal
