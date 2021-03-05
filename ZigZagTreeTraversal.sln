@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZigZagTreeTraversal", "ZigZagTreeTraversal\ZigZagTreeTraversal.csproj", "{AD41C386-6F65-4A8C-B9D3-75CBC8ECE1AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZigZagTreeTraversal.Tests.Unit", "ZigZagTreeTraversal.Tests.Unit\ZigZagTreeTraversal.Tests.Unit.csproj", "{6409A1CA-D567-4937-8017-A033E9BD6739}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD41C386-6F65-4A8C-B9D3-75CBC8ECE1AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD41C386-6F65-4A8C-B9D3-75CBC8ECE1AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD41C386-6F65-4A8C-B9D3-75CBC8ECE1AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD41C386-6F65-4A8C-B9D3-75CBC8ECE1AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6409A1CA-D567-4937-8017-A033E9BD6739}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6409A1CA-D567-4937-8017-A033E9BD6739}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6409A1CA-D567-4937-8017-A033E9BD6739}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6409A1CA-D567-4937-8017-A033E9BD6739}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7DB3249F-9092-4F28-AC68-883E540CD260}
+	EndGlobalSection
+EndGlobal
