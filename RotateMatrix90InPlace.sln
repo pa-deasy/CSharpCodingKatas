@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RotateMatrix90InPlace", "RotateMatrix90InPlace\RotateMatrix90InPlace.csproj", "{85087E6A-9BDF-4A95-A8FE-C8F700EF2568}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RotateMatrix90InPlace.Tests.Unit", "RotateMatrix90InPlace.Tests.Unit\RotateMatrix90InPlace.Tests.Unit.csproj", "{F78D0044-CEBC-49A9-9520-AF621F7D379B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85087E6A-9BDF-4A95-A8FE-C8F700EF2568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85087E6A-9BDF-4A95-A8FE-C8F700EF2568}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85087E6A-9BDF-4A95-A8FE-C8F700EF2568}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85087E6A-9BDF-4A95-A8FE-C8F700EF2568}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F78D0044-CEBC-49A9-9520-AF621F7D379B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F78D0044-CEBC-49A9-9520-AF621F7D379B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F78D0044-CEBC-49A9-9520-AF621F7D379B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F78D0044-CEBC-49A9-9520-AF621F7D379B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {857BBBA1-43A3-4329-9CC1-F45BF429895F}
+	EndGlobalSection
+EndGlobal
