@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BallArrangementProblem", "BallArrangementProblem\BallArrangementProblem.csproj", "{D77623A0-1DC4-4D64-A2BD-A048B509005B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BallArrangementProblem.Tests.Unit", "BallArrangementProblem.Tests.Unit\BallArrangementProblem.Tests.Unit.csproj", "{23BB4FE5-E426-4AB6-8901-BC82877EBA34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D77623A0-1DC4-4D64-A2BD-A048B509005B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D77623A0-1DC4-4D64-A2BD-A048B509005B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D77623A0-1DC4-4D64-A2BD-A048B509005B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D77623A0-1DC4-4D64-A2BD-A048B509005B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23BB4FE5-E426-4AB6-8901-BC82877EBA34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23BB4FE5-E426-4AB6-8901-BC82877EBA34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23BB4FE5-E426-4AB6-8901-BC82877EBA34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23BB4FE5-E426-4AB6-8901-BC82877EBA34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE6DDE8D-BD6E-410D-9CB1-A18CAA5B1E20}
+	EndGlobalSection
+EndGlobal
