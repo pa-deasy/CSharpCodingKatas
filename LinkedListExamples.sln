@@ -11,9 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoubleLinkedListExamples", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoubleLinkedListExamples.Tests.Unit", "DoubleLinkedListExamples.Tests.Unit\DoubleLinkedListExamples.Tests.Unit.csproj", "{0FF465E4-8D5A-4378-AFEC-A62E07A90DBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CircularLinkedListExamples", "CircularLinkedListExamples\CircularLinkedListExamples.csproj", "{2F57C9A8-A9D1-4093-8674-1E2ED6A469F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CircularLinkedListExamples", "CircularLinkedListExamples\CircularLinkedListExamples.csproj", "{2F57C9A8-A9D1-4093-8674-1E2ED6A469F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CircularLinkedListExamples.Tests.Unit", "CircularLinkedListExamples.Tests.Unit\CircularLinkedListExamples.Tests.Unit.csproj", "{6C988162-F133-4B3A-9280-6A79851B209E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CircularLinkedListExamples.Tests.Unit", "CircularLinkedListExamples.Tests.Unit\CircularLinkedListExamples.Tests.Unit.csproj", "{6C988162-F133-4B3A-9280-6A79851B209E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArbitraryLinkedListExamples", "ArbitraryLinkedListExamples\ArbitraryLinkedListExamples.csproj", "{14F09105-E95D-4140-A72F-18BA7E97A306}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArbitraryLinkedListExamples.Tests.Unit", "ArbitraryLinkedListExamples.Tests.Unit\ArbitraryLinkedListExamples.Tests.Unit.csproj", "{E1F21217-30BD-4087-BD25-C71E5E079B5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{6C988162-F133-4B3A-9280-6A79851B209E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C988162-F133-4B3A-9280-6A79851B209E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C988162-F133-4B3A-9280-6A79851B209E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14F09105-E95D-4140-A72F-18BA7E97A306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14F09105-E95D-4140-A72F-18BA7E97A306}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14F09105-E95D-4140-A72F-18BA7E97A306}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14F09105-E95D-4140-A72F-18BA7E97A306}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1F21217-30BD-4087-BD25-C71E5E079B5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1F21217-30BD-4087-BD25-C71E5E079B5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1F21217-30BD-4087-BD25-C71E5E079B5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1F21217-30BD-4087-BD25-C71E5E079B5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

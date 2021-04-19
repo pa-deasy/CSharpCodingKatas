@@ -135,6 +135,7 @@ namespace LinkedListExamples.Tests.Unit
             linkedList.MoveLastNodeToFront();
 
             linkedList.NodeAtPosition(0).Value.Should().Be(5);
+            linkedList.NodeAtPosition(1).Value.Should().Be(1);
             linkedList.NodeAtPosition(4).Value.Should().Be(4);
         }
 

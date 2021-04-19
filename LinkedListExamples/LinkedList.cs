@@ -68,14 +68,15 @@ namespace LinkedListExamples
 
         public void MoveLastNodeToFront()
         {
-            var secondLastNode = SecondLastNode(Head);
+            var last = Last(Head);            
 
-            secondLastNode.Next = null;
+            Push(last);
 
-            Push(secondLastNode);
+            var newLast = Last(Head);
+            newLast.Next = null;
         }
 
-        private Node SecondLastNode(Node node)
+        private Node Last(Node node)
         {
             if (node == null)
                 return node;
@@ -83,7 +84,7 @@ namespace LinkedListExamples
             if (node.Next == null)
                 return node;
 
-            return SecondLastNode(node.Next);
+            return Last(node.Next);
         }
 
         public void Reverse()
