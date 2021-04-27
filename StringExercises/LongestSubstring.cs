@@ -12,15 +12,20 @@ namespace StringExercises
             var longest = string.Empty;
             var current = new List<char>();
             var charQueue = new Queue<char>(word.ToCharArray());
+            var distinctChars = new HashSet<char>();
 
             while (charQueue.Any())
             {
                 var dequeuedChar = charQueue.Dequeue();
 
                 current.Add(dequeuedChar);
+                distinctChars.Add(dequeuedChar);
 
-                if (current.Distinct().Count() > UniqueCharCount)
+                if (distinctChars.Count() > UniqueCharCount)
+                {
                     current = current.ReduceUniqueChars();
+                    distinctChars = new HashSet<char>(current);
+                }
 
                 if (current.Count > longest.Length)
                     longest = new string(current.ToArray());
