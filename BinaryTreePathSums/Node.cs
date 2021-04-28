@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BinaryTreePathSums
+﻿namespace BinaryTreePathSums
 {
     public class Node
     {
-        public int Value { get; private set; }
-        public Node Left { get; private set; }
-        public Node Right { get; private set; }
+        public int Value { get; }
+        public Node Left { get; }
+        public Node Right { get; }
 
         public Node(int value, Node left, Node right)
         {

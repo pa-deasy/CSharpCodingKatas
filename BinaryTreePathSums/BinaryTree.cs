@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace BinaryTreePathSums
 {
@@ -11,7 +12,7 @@ namespace BinaryTreePathSums
             Root = root;
         }
 
-        public List<List<int>> PathsFromRootSummingTo(int sum)
+        public IList<List<int>> PathsFromRootSummingTo(int sum)
             => SumOfPathsFrom(Root, sum, SumState.New).SuccessfulPaths;
 
         public IList<List<int>> AllPathsSummingTo(int sum)
@@ -35,11 +36,11 @@ namespace BinaryTreePathSums
 
         private SumState SumOfPathsFrom(Node node, int targetSum, SumState sumState)
         {
-            if (node == null || sumState.CurrentSum + node.Value > targetSum)
+            if (node == null || sumState.CurrentPath.Sum() + node.Value > targetSum)
                 return sumState;
 
             var currentPath = new List<int> (sumState.CurrentPath);
-            var currentSum = sumState.CurrentSum;
+            var currentSum = currentPath.Sum();
             var successfulPaths = sumState.SuccessfulPaths;
 
             currentSum += node.Value;
@@ -48,32 +49,56 @@ namespace BinaryTreePathSums
             if (currentSum == targetSum)
             {
                 successfulPaths.Add(currentPath);
-                return new SumState(sumState.CurrentSum, sumState.CurrentPath, successfulPaths);
+                return new SumState(sumState.CurrentPath, successfulPaths);
             }
 
             if (node.Left != null)
-                successfulPaths = SumOfPathsFrom(node.Left, targetSum, new SumState(currentSum, currentPath, successfulPaths)).SuccessfulPaths;
+                successfulPaths = SumOfPathsFrom(node.Left, targetSum, new SumState(currentPath, successfulPaths)).SuccessfulPaths;
 
             if (node.Right != null)
-                successfulPaths = SumOfPathsFrom(node.Right, targetSum, new SumState(currentSum, currentPath, successfulPaths)).SuccessfulPaths;
+                successfulPaths = SumOfPathsFrom(node.Right, targetSum, new SumState(currentPath, successfulPaths)).SuccessfulPaths;
 
-            return new SumState(sumState.CurrentSum, sumState.CurrentPath, successfulPaths);
+            return new SumState(sumState.CurrentPath, successfulPaths);
+        }
+
+        public Dictionary<int, int> VerticalSums()
+        {
+            var verticalSums = new Dictionary<int, int>();
+            var queue = new Queue<HorizontalNode>();
+            queue.Enqueue(new HorizontalNode(Root, 0));
+
+            while (queue.Any())
+            {
+                var dequeuedNode = queue.Dequeue();
+
+                if (verticalSums.ContainsKey(dequeuedNode.Position))
+                    verticalSums[dequeuedNode.Position] = verticalSums[dequeuedNode.Position] + dequeuedNode.Node.Value;
+
+                else
+                    verticalSums.Add(dequeuedNode.Position, dequeuedNode.Node.Value);
+
+                if (dequeuedNode.Node.Left != null)
+                    queue.Enqueue(new HorizontalNode(dequeuedNode.Node.Left, dequeuedNode.Position - 1));
+
+                if (dequeuedNode.Node.Right != null)
+                    queue.Enqueue(new HorizontalNode(dequeuedNode.Node.Right, dequeuedNode.Position + 1));
+            }
+
+            return verticalSums;
         }
     }
 
     public class SumState
     {
-        public int CurrentSum { get; private set; }
         public List<int> CurrentPath { get; private set; }
         public List<List<int>> SuccessfulPaths { get; private set; }
 
-        public SumState(int currentSum, List<int> currentPath, List<List<int>> successfulPaths)
+        public SumState(List<int> currentPath, List<List<int>> successfulPaths)
         {
-            CurrentSum = currentSum;
             CurrentPath = currentPath;
             SuccessfulPaths = successfulPaths;
         }
 
-        public static SumState New => new SumState(0, new List<int>(), new List<List<int>>());
+        public static SumState New => new SumState(new List<int>(), new List<List<int>>());
     }
 }

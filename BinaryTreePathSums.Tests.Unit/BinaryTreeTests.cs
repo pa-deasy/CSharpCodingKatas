@@ -1,8 +1,5 @@
 ﻿using FluentAssertions;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Linq;
 
 namespace BinaryTreePathSums.Tests.Unit
@@ -52,6 +49,17 @@ namespace BinaryTreePathSums.Tests.Unit
             paths[7].Should().Match(p => p.ToArray()[0] == 5);
         }
 
+        [Test]
+        public void Given_BinaryTree_When_VerticallySummed_Then_SumsAsExpected()
+        {
+            var verticalSums = TestBinaryTreeD.VerticalSums();
+            verticalSums[-2].Should().Be(4);
+            verticalSums[-1].Should().Be(2);
+            verticalSums[0].Should().Be(13);
+            verticalSums[1].Should().Be(3);
+            verticalSums[2].Should().Be(6);
+        }
+
         private BinaryTree TestBinaryTreeA =>
             new BinaryTree(
                            new Node(1,
@@ -76,5 +84,12 @@ namespace BinaryTreePathSums.Tests.Unit
                                                       new Node(4,
                                              new Node(1),   new Node(2)),      new Node(5,
                                                                            null,     new Node(6)))));
+
+        private BinaryTree TestBinaryTreeD =>
+            new BinaryTree(
+                                  new Node(1,
+                   new Node(2, 
+           new Node(4), new Node(5)),         new Node(3,
+                                         new Node(7), new Node(6))));
     }
 }
