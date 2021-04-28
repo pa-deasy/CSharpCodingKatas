@@ -18,6 +18,16 @@ namespace IsBinarySearchTree.Tests.Unit
         }
 
         [Test]
+        public void Given_BinaryTree_When_SingleNodeSwapped_Then_FixedSuccessfully()
+        {
+            var singleSwappedTree = SingleSwappedTree;
+            singleSwappedTree.FixSingleSwappedTree();
+
+            Assert.AreEqual(4, singleSwappedTree.Root.Left.Left.Value);
+            Assert.AreEqual(8, singleSwappedTree.Root.Right.Value);
+        }
+
+        [Test]
         public void Given_BiggerBinaryTree_When_IsNotSearchTree_Then_ReturnsFalse()
         {
             Assert.IsFalse(BiggerNotBst.IsBst());
@@ -41,5 +51,11 @@ namespace IsBinarySearchTree.Tests.Unit
                           new Node(7,
                     new Node(3), new Node(8)),       new Node(15, 
                                                new Node(9), new Node(17))));
+
+        private static BinaryTree SingleSwappedTree =>
+            new BinaryTree(
+                                          new Node(7,
+                          new Node(5,
+                    new Node(8), new Node(6)),      new Node(4)));
     }
 }
