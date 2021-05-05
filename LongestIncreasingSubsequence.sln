@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestIncreasingSubsequence", "LongestIncreasingSubsequence\LongestIncreasingSubsequence.csproj", "{17A638DC-7DDC-4744-AD29-7670BE71A0AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LongestIncreasingSubsequence", "LongestIncreasingSubsequence\LongestIncreasingSubsequence.csproj", "{17A638DC-7DDC-4744-AD29-7670BE71A0AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestIncreasingSubsequence.Tests.Unit", "LongestIncreasingSubsequence.Tests.Unit\LongestIncreasingSubsequence.Tests.Unit.csproj", "{1639469A-EC3D-4525-A7EC-48F56E266F58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LongestIncreasingSubsequence.Tests.Unit", "LongestIncreasingSubsequence.Tests.Unit\LongestIncreasingSubsequence.Tests.Unit.csproj", "{1639469A-EC3D-4525-A7EC-48F56E266F58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LargestContiguousSum", "LargestContiguousSum\LargestContiguousSum.csproj", "{7A03E761-77AA-46BE-97F0-FCA8C0CB341B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LargestContiguousSum.Tests.Unit", "LargestContiguousSum.Tests.Unit\LargestContiguousSum.Tests.Unit.csproj", "{49A78406-9DDD-4A1A-B2D3-49E2F08E7FA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{1639469A-EC3D-4525-A7EC-48F56E266F58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1639469A-EC3D-4525-A7EC-48F56E266F58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1639469A-EC3D-4525-A7EC-48F56E266F58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A03E761-77AA-46BE-97F0-FCA8C0CB341B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A03E761-77AA-46BE-97F0-FCA8C0CB341B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A03E761-77AA-46BE-97F0-FCA8C0CB341B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A03E761-77AA-46BE-97F0-FCA8C0CB341B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49A78406-9DDD-4A1A-B2D3-49E2F08E7FA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49A78406-9DDD-4A1A-B2D3-49E2F08E7FA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49A78406-9DDD-4A1A-B2D3-49E2F08E7FA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49A78406-9DDD-4A1A-B2D3-49E2F08E7FA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
