@@ -1,6 +1,6 @@
 ﻿namespace StringExercises
 {
-    public static class StringReversal
+    public static class SentenceReversal
     {
         public static string ReverseSentence(this string sentence)
         {

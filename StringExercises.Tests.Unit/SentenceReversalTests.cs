@@ -3,7 +3,7 @@
 namespace StringExercises.Tests.Unit
 {
     [TestFixture]
-    public class StringReversalTests
+    public class SentenceReversalTests
     {
         [Test]
         public void Given_Sentence_When_Reversed_Then_AsExpected()
