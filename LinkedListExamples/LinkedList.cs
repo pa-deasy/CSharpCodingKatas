@@ -102,5 +102,22 @@ namespace LinkedListExamples
 
             Reverse(node);
         }
+
+        public bool LoopExists()
+        {
+            var slowPointer = Head;
+            var fastPointer = Head;
+
+            while(slowPointer != null && fastPointer != null)
+            {
+                slowPointer = slowPointer.Next;
+                fastPointer = fastPointer.Next?.Next;
+
+                if (slowPointer == fastPointer)
+                    return true;
+            }
+
+            return false;
+        }
     }
 }

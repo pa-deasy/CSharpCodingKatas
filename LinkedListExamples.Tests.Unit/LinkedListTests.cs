@@ -177,5 +177,46 @@ namespace LinkedListExamples.Tests.Unit
             linkedList.Pop().Value.Should().Be(9);
             linkedList.NodeAtPosition(1).Value.Should().Be(2);
         }
+
+        [Test]
+        public void Given_LinkedList_When_LoopExists_Then_ReturnsTrue()
+        {
+            var linkedList = new LinkedList();
+
+            var first = new Node(1);
+            var second = new Node(2);
+            var third = new Node(3);
+            var fourth = new Node(4);
+            var fifth = new Node(5);
+
+            linkedList.Head = first;
+            linkedList.Head.Next = second;
+            second.Next = third;
+            third.Next = fourth;
+            fourth.Next = fifth;
+            fifth.Next = second;
+
+            linkedList.LoopExists().Should().BeTrue();
+        }
+
+        [Test]
+        public void Given_LinkedList_When_LoopDoesNotExist_Then_ReturnsFalse()
+        {
+            var linkedList = new LinkedList();
+
+            var first = new Node(1);
+            var second = new Node(2);
+            var third = new Node(3);
+            var fourth = new Node(4);
+            var fifth = new Node(5);
+
+            linkedList.Head = first;
+            linkedList.Head.Next = second;
+            second.Next = third;
+            third.Next = fourth;
+            fourth.Next = fifth;
+
+            linkedList.LoopExists().Should().BeFalse();
+        }
     }
 }
