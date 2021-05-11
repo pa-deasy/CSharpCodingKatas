@@ -27,5 +27,16 @@ namespace TwoSumThreeSumProblems.Tests.Unit
 
             Assert.AreEqual(expectedPair, triplet);
         }
+
+        [Test]
+        public void Given_Target_When_TargetSummingFourExists_Then_ReturnsFour()
+        {
+            var numbers = new int[] { 1, 2, 3, 15, 5, 9, 7, 17 };
+            var expectedFour = new int[] { 1, 7, 3, 5 };
+
+            var four = numbers.FindFourSummingTo(16);
+
+            Assert.AreEqual(expectedFour, four);
+        }
     }
 }
