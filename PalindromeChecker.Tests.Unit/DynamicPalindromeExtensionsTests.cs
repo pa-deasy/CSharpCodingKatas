@@ -12,5 +12,13 @@ namespace PalindromeChecker.Tests.Unit
         {
             word.LongestPalindrome().Should().Be(expectedString);
         }
+
+        [TestCase("Geeks", 1)]
+        [TestCase("abaab", 3)]
+        [TestCase("abbaeae", 4)]
+        public void Given_Word_When_PalindromesExist_Then_ReturnsCountOfPalindrome(string word, int palindromeCount)
+        {
+            word.PalindromeCount().Should().Be(palindromeCount);
+        }
     }
 }

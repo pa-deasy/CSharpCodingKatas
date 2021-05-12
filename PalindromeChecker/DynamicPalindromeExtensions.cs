@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 
 namespace PalindromeChecker
 {
@@ -29,6 +28,34 @@ namespace PalindromeChecker
             }
 
             return longestWord;
+        }
+
+        public static int PalindromeCount(this string word)
+        {
+            var chars = word.ToCharArray();
+            var matrix = new int[chars.Length, chars.Length];
+            var palindromeCount = 0;
+
+            for (int y = 0; y < chars.Length; y++)
+                for (int x = chars.Length - 1; x >= 0; x--)
+                {
+                    var previous = y - 1 >= 0 && x + 1 <= chars.Length - 1
+                        ? matrix[y - 1, x + 1]
+                        : 0;
+
+                    var current = chars[y] == chars[x]
+                        ? previous + 1
+                        : 0;
+
+                    matrix[y, x] = current;
+
+                    var isLast = y + 1 > chars.Length - 1 || x - 1 < 0 || chars[y + 1] != chars[x - 1];
+
+                    if (isLast)
+                        palindromeCount += current / 2;
+                }
+
+            return palindromeCount;
         }
     }
 }
